@@ -6,6 +6,9 @@ images:
     arch: "x86_64"
     digest: "sha512:d7e6a9c9519d94e006af40f689b98c235624bcc5c32f13ad4fe6c6ae411db4a1d6f5415135cd06665fc6eccd4c857d64512c28ec76cd04bfdfbd791408c57eb6"
 
+user:
+  name: emilkje
+
 mounts:
 - location: "~"
   writable: false
