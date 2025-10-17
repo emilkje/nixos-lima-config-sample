@@ -20,13 +20,9 @@
     services.openssh.enable = true;
 
     # pkgs
-    environment = {
-        systemPackages = with pkgs; [ vim ];
-        shells = with pkgs; [ zsh ];
-    };
-
-    users.defaultUserShell = pkgs.zsh;
-    programs.zsh.enable = true;
+    environment.systemPackages = with pkgs; [ 
+        vim 
+    ];
 
     security = {
         sudo.wheelNeedsPassword = false;
