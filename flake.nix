@@ -46,7 +46,7 @@
           modules = [
             {
                home.username = "emilkje";
-               home.homeDirectory = "/home/emilkje";
+               home.homeDirectory = "/home/emilkje.linux";
                home.stateVersion = "25.05";
                programs.git.userEmail = "emilkje@gmail.com";
                programs.git.userName  = "Emil Kjelsrud";
