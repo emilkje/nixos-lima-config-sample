@@ -21,8 +21,8 @@
 
     # pkgs
     environment = {
-        systemPackages = with pkgs; [ vim ]
-        shells = with pkgs; [ zsh ]
+        systemPackages = with pkgs; [ vim ];
+        shells = with pkgs; [ zsh ];
     };
 
     users.defaultUserShell = pkgs.zsh;
