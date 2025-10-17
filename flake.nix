@@ -24,7 +24,7 @@
           # Pass the `nixos-lima` input along with the default module system parameters
           specialArgs = { inherit nixos-lima; };
           modules = [
-            ./nixos-lima-config.nix
+            ./configuration.nix
           ];
         };
         nixosConfigurations.emilkje-x86_64 = nixpkgs.lib.nixosSystem {
@@ -32,7 +32,7 @@
           # Pass the `nixos-lima` input along with the default module system parameters
           specialArgs = { inherit nixos-lima; };
           modules = [
-            ./nixos-lima-config.nix
+            ./configuration.nix
           ];
         };
 
