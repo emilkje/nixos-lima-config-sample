@@ -19,7 +19,7 @@
       system = "aarch64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-        nixosConfigurations.nixsample-aarch64 = nixpkgs.lib.nixosSystem {
+        nixosConfigurations.emilkje-aarch64 = nixpkgs.lib.nixosSystem {
           system = "aarch64-linux";
           # Pass the `nixos-lima` input along with the default module system parameters
           specialArgs = { inherit nixos-lima; };
@@ -27,7 +27,7 @@
             ./nixos-lima-config.nix
           ];
         };
-        nixosConfigurations.nixsample-x86_64 = nixpkgs.lib.nixosSystem {
+        nixosConfigurations.emilkje-x86_64 = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           # Pass the `nixos-lima` input along with the default module system parameters
           specialArgs = { inherit nixos-lima; };
@@ -38,18 +38,18 @@
 
         # You'll need to change the configuration name to match the username
         # that Lima automatically creates (same as your host username)
-        homeConfigurations."lima" = home-manager.lib.homeManagerConfiguration {
+        homeConfigurations."emilkje" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
           # Specify your home configuration modules here, for example,
           # the path to your home.nix.
           modules = [
             {
-               home.username = "lima";
-               home.homeDirectory = "/home/lima.linux";
+               home.username = "emilkje";
+               home.homeDirectory = "/home/emilkje";
                home.stateVersion = "25.05";
-               programs.git.userEmail = "lima@nowaythisdomainexistsreally.com";
-               programs.git.userName  = "Lima User";
+               programs.git.userEmail = "emilkje@gmail.com";
+               programs.git.userName  = "Emil Kjelsrud";
             }
             ./home.nix
           ];
