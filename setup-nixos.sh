@@ -4,25 +4,25 @@
 set -eux
 
 # Name of NixOS default configuration to apply (from the repo's flake.nix)
-DEFAULT_CONFIG_NAME='nixsample'
+DEFAULT_CONFIG_NAME='emilkje-aarch64'
 # Git Repo containing a flake.nix containing NixOS configurations
 # In the sample the repo is the same as Home Manager repo, but they can be different
-DEFAULT_CONFIG_REPO='https://github.com/nixos-lima/nixos-lima-config-sample.git'
+DEFAULT_CONFIG_REPO='https://github.com/emilkje/nixos-lima-config-sample.git'
 
 display_help() {
-    echo
-    echo "Usage: $0 guest-hostname [config-name] [config-repo]"
-    echo "Defaults are:"
-    echo "config-name: $DEFAULT_CONFIG_NAME"
-    echo "config-repo: $DEFAULT_CONFIG_REPO"
-    echo
+  echo
+  echo "Usage: $0 guest-hostname [config-name] [config-repo]"
+  echo "Defaults are:"
+  echo "config-name: $DEFAULT_CONFIG_NAME"
+  echo "config-repo: $DEFAULT_CONFIG_REPO"
+  echo
 }
 
 # Check if no arguments are provided
 set +x
 if [ $# -eq 0 ]; then
-    display_help
-    exit 1
+  display_help
+  exit 1
 fi
 set -x
 

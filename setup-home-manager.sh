@@ -6,22 +6,22 @@ set -eux
 
 # Git Repo containing a flake.nix containing Home Manager configurations
 # In the sample the repo is the same as the NixOS configuration repo, but they can be different
-DEFAULT_CONFIG_REPO='https://github.com/nixos-lima/nixos-lima-config-sample.git'
+DEFAULT_CONFIG_REPO='https://github.com/emilkje/nixos-lima-config-sample.git'
 
 display_help() {
-    echo
-    echo "Usage: $0 guest-hostname [guest-user] [config-repo]"
-    echo "Defaults are:"
-    echo "guest-user: $USER"
-    echo "config-repo: $DEFAULT_CONFIG_REPO"
-    echo
+  echo
+  echo "Usage: $0 guest-hostname [guest-user] [config-repo]"
+  echo "Defaults are:"
+  echo "guest-user: $USER"
+  echo "config-repo: $DEFAULT_CONFIG_REPO"
+  echo
 }
 
 # Check if no arguments are provided
 set +x
 if [ $# -eq 0 ]; then
-    display_help
-    exit 1
+  display_help
+  exit 1
 fi
 set -x
 
@@ -53,4 +53,3 @@ limactl shell $GUEST_HOST_NAME -- git clone $GUEST_CONFIG_REPO $GUEST_CONFIG_DIR
 
 # Initialize Home Manager
 limactl shell $GUEST_HOST_NAME -- nix run home-manager/master -- init --switch
-
